@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/teAddTicketTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nexa_font"
+        android:text="Edit ticket"
+        android:textSize="24sp"
+        android:textColor="@color/grey_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        />
+
+    <Spinner
+        android:id="@+id/teTypeSpinner"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/teTicketTittleEditText"
+        app:layout_constraintTop_toBottomOf="@id/teAddTicketTittle"
+         />
+
+    <Spinner
+        android:id="@+id/tePrioritySpinner"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/teAddTicketTittle"
+        app:layout_constraintStart_toEndOf="@id/teTypeSpinner"
+         />
+
+    <EditText
+        android:id="@+id/teEstEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Est."
+        android:inputType="number"
+        android:ems="2"
+        app:layout_constraintTop_toTopOf="@id/tePrioritySpinner"
+        app:layout_constraintBottom_toBottomOf="@id/tePrioritySpinner"
+        app:layout_constraintLeft_toRightOf="@id/tePrioritySpinner" />
+
+    <EditText
+        android:id="@+id/teTicketTittleEditText"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Ticket tittle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tePrioritySpinner"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:paddingTop="30dp"
+        android:id="@+id/teTicketDescriptionEditText"
+        android:layout_width="330dp"
+        android:ems="3"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Ticket description"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/teTicketTittleEditText"
+        android:layout_marginTop="20dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/app_color_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/teTicketDescriptionEditText"
+        app:layout_constraintStart_toStartOf="@id/teTicketTittleEditText"
+        >
+
+        <Button
+            android:id="@+id/teSaveTicket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_color"
+            android:fontFamily="@font/nexa_font"
+            android:textAlignment="center"
+            android:background="@color/app_color_yellow"
+            android:text="Save"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

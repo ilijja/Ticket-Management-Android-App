@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">rs.raf.projekat.ilija_dimitrijevic_rn9920</string>
+
+    <string-array name="ticketType">
+        <item>Bug</item>
+        <item>Enhancement</item>
+    </string-array>
+
+</resources>

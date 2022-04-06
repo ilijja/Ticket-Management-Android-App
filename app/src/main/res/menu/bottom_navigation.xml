@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_1"
+        android:icon="@drawable/statistics_icon"
+        android:title="Statistics"
+        />
+
+    <item
+        android:id="@+id/navigation_2"
+        android:icon="@drawable/new_icon"
+        android:title="New" />
+
+
+    <item
+        android:id="@+id/navigation_3"
+        android:icon="@drawable/tickets_icon"
+        android:title="Tickets" />
+
+    <item
+        android:id="@+id/navigation_4"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile"
+        />
+
+</menu>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/AddTicketTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add new ticket"
+        android:textColor="@color/grey_color"
+        android:fontFamily="@font/nexa_font"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        />
+
+    <Spinner
+        android:id="@+id/typeSpinner"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ticketTittleEditText"
+        app:layout_constraintTop_toBottomOf="@id/AddTicketTittle"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/prioritySpinner"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/AddTicketTittle"
+        app:layout_constraintStart_toEndOf="@id/typeSpinner"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/estEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Est."
+        android:inputType="number"
+        android:ems="2"
+        app:layout_constraintTop_toTopOf="@id/prioritySpinner"
+        app:layout_constraintBottom_toBottomOf="@id/prioritySpinner"
+        app:layout_constraintLeft_toRightOf="@id/prioritySpinner" />
+
+    <EditText
+        android:id="@+id/ticketTittleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Ticket tittle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prioritySpinner"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:paddingTop="30dp"
+        android:id="@+id/ticketDescriptionEditText"
+        android:layout_width="match_parent"
+        android:ems="3"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Ticket description"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ticketTittleEditText"
+        android:layout_marginTop="20dp" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/app_color_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <Button
+            android:id="@+id/addTicketBtn"
+            android:textColor="@color/grey_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="@font/nexa_font"
+            android:background="@color/app_color_yellow"
+            android:text="Add new Ticket"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

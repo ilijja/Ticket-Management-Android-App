@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+
+    <TextView
+        android:id="@+id/staisticsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nexa_font"
+        android:text="Raf Jira Statistics"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/todoView"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/inProgressView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/staisticsTv">
+
+        <TextView
+            android:id="@+id/todoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToDo"
+            android:fontFamily="@font/nexa_font"
+            android:textColor="@color/todo_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/todoNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:textColor="@color/todo_color"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:text="5"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/todoTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/todoTv" />
+
+        <TextView
+            android:id="@+id/todoEnhacementsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Enhancements"
+            android:fontFamily="@font/nexa_font"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/todoBugsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todoTv" />
+
+        <TextView
+            android:id="@+id/todoEnhacementsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/todoEnhacementsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/todoEnhacementsTv"
+            tools:layout_editor_absoluteX="264dp" />
+
+        <TextView
+            android:id="@+id/todoBugsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bugs"
+            android:textSize="18sp"
+            android:fontFamily="@font/nexa_font"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/todoEnhacementsTv"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/todoBugsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:text="5"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/todoBugsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/todoBugsTv"
+            tools:layout_editor_absoluteX="255dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inProgressView"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/doneView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todoView">
+
+        <TextView
+            android:id="@+id/inProgressTv"
+            android:fontFamily="@font/nexa_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In progress"
+            android:textColor="@color/in_progress_collor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/inProgressNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:textColor="@color/in_progress_collor"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/inProgressTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inProgressTv" />
+
+        <TextView
+            android:id="@+id/ipEnhacementsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Enhancements"
+            android:fontFamily="@font/nexa_font"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/ipBugsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inProgressTv" />
+
+        <TextView
+            android:id="@+id/ipEnhacementsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ipEnhacementsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ipEnhacementsTv"
+            tools:layout_editor_absoluteX="264dp" />
+
+        <TextView
+            android:id="@+id/ipBugsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bugs"
+            android:textSize="18sp"
+            android:fontFamily="@font/nexa_font"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ipEnhacementsTv" />
+
+        <TextView
+            android:id="@+id/ipBugsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ipBugsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ipBugsTv"
+            tools:layout_editor_absoluteX="255dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/doneView"
+        android:layout_width="355dp"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inProgressView">
+
+        <TextView
+            android:id="@+id/doneTv"
+            android:fontFamily="@font/nexa_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textColor="@color/done_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/doneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:paddingLeft="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            android:textColor="@color/done_color"
+            app:layout_constraintBottom_toBottomOf="@id/doneTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/doneTv" />
+
+        <TextView
+            android:id="@+id/doneEnhacementsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/nexa_font"
+            android:layout_marginBottom="15dp"
+            android:text="Enhancements"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/doneBugsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doneTv"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <TextView
+            android:id="@+id/doneEnhacementsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/doneEnhacementsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/doneEnhacementsTv"
+            tools:layout_editor_absoluteX="264dp" />
+
+        <TextView
+            android:id="@+id/doneBugsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bugs"
+            android:textSize="18sp"
+            android:fontFamily="@font/nexa_font"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doneEnhacementsTv"
+            tools:layout_editor_absoluteX="171dp"
+            tools:layout_editor_absoluteY="119dp" />
+
+        <TextView
+            android:id="@+id/doneBugsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/doneBugsTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/doneBugsTv"
+            tools:layout_editor_absoluteX="255dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-35dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="-38dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
